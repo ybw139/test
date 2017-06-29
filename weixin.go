@@ -12,7 +12,7 @@ import (
 	"nxstory.com/models"
 	"runtime"
 )
-
+//分支1
 type WeixinController struct {
 	CommonController
 }
