@@ -15,8 +15,8 @@ func hello(name string) string {
 func runWebSocket() {
 	service := ws.NewWebSocketService()
 	service.AddFunction("hello", hello)
-	http.ListenAndServe(":8081", service)
-	// http.ListenAndServeTLS(":8081", beego.AppConfig.String("HTTPSCertFile"), beego.AppConfig.String("HTTPSKeyFile"), service)
+	//http.ListenAndServe(":8081", service)
+	 http.ListenAndServeTLS(":8081", beego.AppConfig.String("HTTPSCertFile"), beego.AppConfig.String("HTTPSKeyFile"), service)
 }
 func main() {
 	go runWebSocket()
